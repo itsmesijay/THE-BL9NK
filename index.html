@@ -12,6 +12,23 @@
 <body>
     <header>
         <a href="#" class="logo">BL9NK</a>
+	<form action="/submit" method="post" id="myForm" novalidate>
+  <!-- Include CSRF token server-side if required, example: -->
+  <!-- <input type="hidden" name="csrf_token" value="{{ csrf_token }}"> -->
+
+  <label for="user_input">Enter text</label>
+  <input
+    id="user_input"
+    name="user_input"
+    type="text"
+    placeholder="Type here"
+    maxlength="256"
+    autocomplete="off"
+    required
+  />
+
+  <button type="submit">Submit</button>
+</form>
 
         <nav>
             <a href="index.html" class="active"> Home</a>
